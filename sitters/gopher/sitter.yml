@@ -1,0 +1,5 @@
+states:
+  idle:
+    rate: 6
+    images:
+      - images/idle-*.png
