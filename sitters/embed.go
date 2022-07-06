@@ -5,7 +5,7 @@ import (
 	"image"
 	_ "image/png"
 	"os"
-	"path/filepath"
+	"path"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/kettek/go-multipath/v2"
@@ -23,7 +23,7 @@ func init() {
 }
 
 func LoadSitter(s string) (sitter *Sitter, err error) {
-	bytes, err := FS.ReadFile(filepath.Join(s, "sitter.yml"))
+	bytes, err := FS.ReadFile(path.Join("gopher", "sitter.yml"))
 	if err != nil {
 		return nil, err
 	}
@@ -35,7 +35,7 @@ func LoadSitter(s string) (sitter *Sitter, err error) {
 
 	for k, state := range sitter.States {
 		for _, imgFile := range state.Images.imageFiles {
-			imgFiles, _ := FS.Glob(filepath.Join(s, imgFile))
+			imgFiles, _ := FS.Glob(path.Join(s, imgFile))
 			for _, imgFile := range imgFiles {
 				f, err := FS.Open(imgFile)
 				if err != nil {
