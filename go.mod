@@ -7,7 +7,7 @@ require (
 	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/hajimehoshi/ebiten/v2 v2.3.5 // indirect
 	github.com/jezek/xgb v1.0.1 // indirect
-	github.com/kettek/go-multipath/v2 v2.0.0-alpha.3 // indirect
+	github.com/kettek/go-multipath/v2 v2.0.0-alpha.4 // indirect
 	github.com/kettek/gobl v0.1.1-0.20220312222957-aba683107d7d // indirect
 	github.com/radovskyb/watcher v1.0.7 // indirect
 	golang.org/x/exp v0.0.0-20190731235908-ec7cb31e5a56 // indirect
