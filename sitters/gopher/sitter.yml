@@ -3,3 +3,22 @@ states:
     rate: 6
     images:
       - images/idle-*.png
+    interpreter: |
+      func Click(s *sitters.Sitter) bool {
+        s.SetState("frozen")
+        return false
+      }
+  frozen:
+    rate: 6
+    images:
+      - images/idle-01.png
+    interpreter: |
+      func Click(s *sitters.Sitter) bool {
+        s.SetState("idle")
+        return false
+      }
+interpreter: |
+  func Click(s *sitters.Sitter) bool {
+    fmt.Println("global click")
+    return true
+  }
